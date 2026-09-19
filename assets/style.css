@@ -178,7 +178,8 @@ article:not(.ogpCard_wrap) { background:var(--surface); border:1px solid var(--l
 .body article, .body article.ogpCard_wrap { background:transparent !important; border:none !important; border-radius:0 !important; padding:0 !important; }
 article h1 { margin-bottom:5px; }
 .source { color:var(--muted); font-size:.9rem; margin-bottom:30px; word-break:break-word; }
-.body img { max-width:100%; height:auto; display:block; margin:18px auto; }
+.body img:not(.ogpCard_image):not(.ogpCard_icon) { width:auto; max-width:100%; height:auto; display:block; margin:18px auto; }
+.body img.ogpCard_image, .body img.ogpCard_icon { max-width:none; }
 .body p { margin:1em 0; }
 .body .amp-nodisplay { display:none !important; }
 .body [style*="stat100.ameba.jp"] { background-image:none !important; padding-top:0 !important; padding-bottom:0 !important; }
