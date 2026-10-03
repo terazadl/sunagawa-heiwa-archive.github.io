@@ -330,6 +330,7 @@ run().catch(e => {{ console.error(e); process.exit(1); }});
     assert db["flexDirection"] == "row", f"Desktop flex-direction should be row, got {db['flexDirection']}"
     assert db["height"] <= 64, f"Desktop entry height {db['height']} exceeds 64px"
     assert db["allWidthsEqual"], f"All desktop entry widths must be equal (got min={db['minEntryWidth']}px, max={db['maxEntryWidth']}px)"
+    assert db["maxEntryWidth"] <= 940, f"Desktop entry width {db['maxEntryWidth']}px exceeds container width 940px"
 
     ds = data["desktopSearch"]
     assert ds["hasSearchClass"], "Desktop search mode must have has-search class on body"
